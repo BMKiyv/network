@@ -1,0 +1,12 @@
+@font-face {
+    font-family: 'Yarin';
+    src: local('Yarin'), local('Yarin-Regular'), url('./fonts/Yarin.woff2') format('woff2'), url('./fonts/Yarin.woff') format('woff'), url('./fonts/Yarin.ttf') format('truetype');
+    font-weight: 400;
+    font-style: normal;
+}
+@font-face {
+    font-family: 'Yarin';
+    src: local('Yarin Bold'), local('Yarin-Bold'), url('./fonts/Yarinbold.woff2') format('woff2'), url('./fonts/Yarinbold.woff') format('woff'), url('./fonts/Yarinbold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
