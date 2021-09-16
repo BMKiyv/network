@@ -53,3 +53,13 @@ body{
     .anchor{
       display:block;
     }
+    .titles{
+      padding-bottom: 10px;
+    }
+    .posts{
+      background: rgba(122,23,77,0.5);
+      padding: 10px 0 0 10px;
+    }
+    .content>:last-child{
+      padding: 10px 0 10px 10px;
+    }
