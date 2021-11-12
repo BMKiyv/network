@@ -1,0 +1,9 @@
+.dialogs{
+    display: grid;
+    grid-template-columns: 6fr 2fr;
+&-link{
+    width: 200px;
+    display: inline-block;
+    margin-left: 20px;
+}
+}
