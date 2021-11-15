@@ -9,6 +9,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Dialogs from './components/Dialogs';
 import {myUsers} from './data/data';
 import {me} from './data/data';
+import {addPost,updateInput} from './data/newRender';
 
 
 function App() {
@@ -17,9 +18,9 @@ function App() {
     <div className="App">
       <Header />
       <SideBar />
-      <Route path = '/main'exact render = {()=><TheWall data = {me.posts}/> } />
-      <Route path = '/bio' exact render = {()=><Bio data = {me} />}/>
-      <Route path = '/dialogs' exact render = {()=><Dialogs myUsers = {myUsers}/>} />
+      <Route path = '/' render = {()=><TheWall data = {me.posts} updateInput = {updateInput} addPost = {addPost} newPost = {me.newPost}/> } />
+      <Route path = '/bio'  render = {()=><Bio data = {me} />}/>
+      <Route path = '/dialogs' render = {()=><Dialogs myUsers = {myUsers}/>} />
       <TheInput />
     </div>
     </BrowserRouter>

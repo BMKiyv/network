@@ -23,6 +23,7 @@ export  const myUsers = [
 export const me = {
     'myName': 'Michael',
     'photo': 'avatar',
+    'newPost': '',
     'posts': [
         'hello world',
          'this is new post',
