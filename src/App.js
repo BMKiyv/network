@@ -9,7 +9,7 @@ import {BrowserRouter, Route} from 'react-router-dom';
 import Dialogs from './components/Dialogs';
 import {myUsers} from './data/data';
 import {me} from './data/data';
-import {addPost,updateInput} from './data/newRender';
+import {addPost,updateInput} from './data/data';
 
 
 function App() {

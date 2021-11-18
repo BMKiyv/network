@@ -7,7 +7,6 @@ const Messages = ({data,addPost,newPost,updateInput}) => {
         let target = theRef.current.value
         newPost = target
         addPost(newPost);
-        updateInput('');
 
     }
     const hundleNewPost = () => {
