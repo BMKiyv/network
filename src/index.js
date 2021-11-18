@@ -2,16 +2,16 @@ import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
-import {subscribe} from './data/data'
+import store from './data/data'
 
 const renderApp = ()=> { ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <App store = {store}/>
   </React.StrictMode>,
   document.getElementById('root')
 )};
 
 renderApp();
 
-subscribe(renderApp)
+store.subscribe(renderApp)
 

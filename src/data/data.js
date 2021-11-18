@@ -1,7 +1,8 @@
-let renderApp = () => {
+const store = {
+renderApp() {
     console.log('changed');
-}
-export  const myUsers = [
+},
+_myUsers:[
     {
         'user': 'vasya',
         'message': 'hi',
@@ -22,8 +23,8 @@ export  const myUsers = [
         'message': 'what`s happening?',
         'id': 3
     }
-]
-export const me = {
+],
+_me : {
     'myName': 'Michael',
     'photo': 'avatar',
     'newPost': '',
@@ -34,21 +35,23 @@ export const me = {
          'also one post',
         'finally, the last post'
      ]
-}
+},
 
-export const addPost = () => {
-    me.posts.push(me.newPost)
-    me.newPost = ''
-    renderApp()
-};
+addPost() {
+    this._me.posts.push(this._me.newPost)
+    this._me.newPost = ''
+    this.renderApp()
+},
 
-export const updateInput = (message) => {
-    me.newPost = message
-    renderApp()
+updateInput(message){
+    this._me.newPost = message
+    this.renderApp()
     
-};
+},
 
 
-export let subscribe = (observer) => {
-    renderApp = observer
+subscribe(observer){
+    this.renderApp = observer
 }
+}
+export default store;
