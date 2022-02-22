@@ -6,25 +6,25 @@ const store = {
         {
             'user': 'vasya',
             'message': 'hi',
-            'answer': '',
+            'answer': [],
             'id': 0
         },
         {
             'user': 'petya',
             'message': 'how are you?',
-            'answer': '',
+            'answer': [],
             'id': 1
         },
         {
             'user': 'kolya',
             'message': 'take care!',
-            'answer': '',
+            'answer': [],
             'id': 2
         },
         {
             'user': 'artur',
             'message': 'what`s happening?',
-            'answer': '',
+            'answer': [],
             'id': 3
         }
     ],
@@ -64,7 +64,7 @@ const store = {
         this.renderApp()
         }
         else if(action.type === 'ADD-ANSWER'){
-            this._myUsers[i].answer = this.newPost
+            this._myUsers[i].answer.push(this.newPost)
             this.newPost = ''
             this.renderApp()
         }

@@ -26,7 +26,7 @@ const Chat = ({user,userId, dispatch, newPost}) => {
                     <Post message = {data.message} />
                     <input type = 'text' ref = {theRef} value = {newPost} onChange = {hundleNewPost} />
                     <button onClick = {addingPost}>Add new post</button>
-                    <div>{data.answer}</div>
+                    <div>{data.answer.map((item,index)=><div className='posts' key={index}>{item}</div>)}</div>
                 </>)
     }
     return (
