@@ -2,12 +2,12 @@ import React from 'react'
 import Titles from '../Titles'
 import Messages from '../Messages'
 
-const TheWall = ({data,addPost,newPost,updateInput}) => {
+const TheWall = ({data, dispatch, newPost}) => {
 
     return (
         <>
            <Titles mess ='This is my Wall' />
-           <Messages data = {data} addPost = {addPost} newPost = {newPost} updateInput = {updateInput} />
+           <Messages data = {data} dispatch = { dispatch } newPost = {newPost}  />
         </>
     )
 }

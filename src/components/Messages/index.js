@@ -1,18 +1,18 @@
 import React from "react";
 //import {addPost} from '../../data/newRender';
 
-const Messages = ({data,addPost,newPost,updateInput}) => {
+const Messages = ({data, dispatch, newPost}) => {
     const theRef = React.createRef()
     const addingPost = () => {
         let target = theRef.current.value
         newPost = target
-        addPost(newPost);
+        dispatch({type: 'ADD-POST'});
 
     }
     const hundleNewPost = () => {
         let target = theRef.current.value
         newPost = target
-        updateInput(target);
+        dispatch({type:'UPDATE-INPUT', message: newPost});
     }
     return (
         <div className='content'>
