@@ -20,12 +20,12 @@ function App({store}) {
     <div className="App">
       <Header />
       <SideBar />
-      <Route path = '/' exact render = {()=><TheWall data = {store._me.posts} dispatch = {store.dispatch.bind(store)} newPost = {store.newPost}/> } />
+      <Route path = '/' exact render = {()=><TheWall data = {store._me.posts} dispatch = {store.dispatch.bind(store)} newPost = {store._me.newPost}/> } />
       <Route path = '/bio' exact  render = {()=><Bio data = {store._me} />}/>
       <Route path = '/dialogs' exact render = {()=><Dialogs myUsers = {store._myUsers}/>} />
       <Route path = '/dialogs/:userId' render = {({match})=>{
         const id = match.params;
-       return <Chat user = {store._myUsers} userId = {id} dispatch = {store.dispatch.bind(store)} newPost = {store.newPost}/>}}
+       return <Chat user = {store._myUsers} userId = {id} dispatch = {store.dispatch.bind(store)} newPost = {store._myUsers[parseInt(id.userId)].newPost}/>}}
          />
       <TheInput />
     </div>

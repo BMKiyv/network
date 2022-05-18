@@ -1,6 +1,7 @@
 import React from 'react'
 import Post from '../Post/index'
 import Titles from '../Titles'
+import { addingAnswerActionCreator,hundleNewChatActionCreator } from '../../data/actionCreators' 
 
 const Chat = ({user,userId, dispatch, newPost}) => {
     const idUser = parseInt(userId.userId)
@@ -11,13 +12,13 @@ const Chat = ({user,userId, dispatch, newPost}) => {
     const addingPost = () => {
         let target = theRef.current.value
         newPost = target
-        dispatch({type: 'ADD-ANSWER'},idUser);
+        dispatch(addingAnswerActionCreator(),idUser);
 
     }
     const hundleNewPost = () => {
         let target = theRef.current.value
         newPost = target
-        dispatch({type:'UPDATE-INPUT', message: newPost});
+        dispatch(hundleNewChatActionCreator(newPost),idUser);
     }
 
     const renderUser = data => {
